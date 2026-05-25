@@ -73,7 +73,7 @@ async def deletar_games( id_do_delete:  int , session: Session = Depends(abrir_s
 
 @router_games.get("/buscar_status/{status_busca}")
 async def buscar_status( status_busca: str  , session: Session = Depends(abrir_session)):
-    busca = session.uqery(Game_List).filter(Game_List.status==status_busca).first()
+    busca = session.query(Game_List).filter(Game_List.status==status_busca).first()
     if busca:
         return{
             "mensagem": busca

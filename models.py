@@ -12,12 +12,13 @@ class Game_List(Base):
     rating = Column ("rating", Integer)
 
 
-    def __init__(self, title, genre, plataform, rating, status):
+    def __init__(self, title, genre, plataform, status, rating):
         self.title = title 
         self.genre = genre
         self.plataform = plataform
-        self.rating = rating
         self.status = status
+        self.rating = rating
+        
         
 
         
