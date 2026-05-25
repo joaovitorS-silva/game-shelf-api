@@ -8,11 +8,11 @@ class Game_List(Base):
     title = Column("title", String(255))
     genre = Column ("genre", String(60))
     plataform = Column ("plataform", String(60))
-    status = Column ("status", String(60), default='WISHLIST')
+    status = Column ("status", String(60))
     rating = Column ("rating", Integer)
 
 
-    def __init__(self, title, genre, plataform, rating, status="WISHLIST"):
+    def __init__(self, title, genre, plataform, rating, status):
         self.title = title 
         self.genre = genre
         self.plataform = plataform
@@ -25,4 +25,4 @@ class Game_List(Base):
 
 
 
-            #async def lista_games(id, title, genero, plataform, status, rating):
+      
